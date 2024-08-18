@@ -1,0 +1,86 @@
+/* Define text color variables */
+:root {
+  --text-color-dark: white;
+  --text-color-light: black;
+}
+
+/* Apply the text color based on the theme */
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 50px; /* Adds padding between the experience and projects sections */
+  color: var(--text-color-dark);
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.experienceLogo {
+  max-width: 200px;
+  align-self: center;
+  background-color: var(--project-card-bg);
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+[data-theme="light"] .experienceLogo {
+  border-color: black; 
+}
+
+.experienceDetails {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center; /* Center the text */
+  font-family: 'YourGoogleFontName', sans-serif; /* Replace 'YourGoogleFontName' with your actual font name */
+  color: inherit; /* Use inherited color */
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: inherit; /* Use inherited color */
+}
+
+.date {
+  font-size: 1rem;
+  color: inherit; /* Use inherited color */
+  margin-bottom: 15px;
+}
+
+.bulletPoint {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  list-style-type: disc; /* Add bullet points */
+  padding-left: 20px;
+  color: inherit; /* Use inherited color */
+}
+
+.bulletPoint::before {
+  content: "• ";
+  color: inherit; /* Use inherited color */
+}
+
+@media (width >= 800px) {
+  .experienceContainer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .experienceLogo {
+    margin-right: 30px;
+  }
+
+  .experienceDetails {
+    text-align: left;
+  }
+
+  .bulletPoint {
+    text-align: left; /* Left align the bullet points on larger screens */
+  }
+}

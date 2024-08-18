@@ -1,0 +1,40 @@
+/* Define text color variables */
+:root {
+  --text-color-dark: white;
+  --text-color-light: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0; /* Adds padding to the top and bottom of the section */
+  color: var(--text-color-dark);
+}
+
+.title {
+  font-family: 'Righteous', sans-serif; /* Matching the font used in your README */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: inherit; /* Use inherited color */
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Adds space between rows of icons */
+}
+
+.skillIcons {
+  max-width: 100%;
+}
+
+@media (min-width: 800px) {
+  .iconsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
