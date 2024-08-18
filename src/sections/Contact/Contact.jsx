@@ -19,7 +19,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const subject = 'Interest from Personal Website';
-    const body = `Message: ${formData.message}\n\nRegards,\n${formData.name}`;
+    const body = `${formData.message}\n\nRegards,\n${formData.name}`;
     window.location.href = `mailto:natanelsolomonov76@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
