@@ -18,14 +18,8 @@
 }
 
 .projectsSection a {
-  width: fit-content;
   text-decoration: none;
-  color: #222;
-  transition: transform 200ms ease-in-out;
-}
-
-.projectsSection a:hover {
-  transform: scale(1.05);
+  color: inherit;
 }
 
 .projectsContainer {
@@ -33,6 +27,142 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+}
+
+.projectLogo {
+  display: block;
+}
+
+.imageLink {
+  display: flex;
+  justify-content: center;
+  transition: transform 200ms ease-in-out;
+  transform-origin: center;
+}
+
+.imageLink:hover {
+  transform: scale(1.05);
+}
+
+.projectTitle {
+  color: var(--text-color);
+  width: 100%;
+  text-align: center;
+}
+
+.textLink {
+  color: var(--btn-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 8px;
+}
+
+.textLink:hover {
+  opacity: 0.8;
+}
+
+.contextLink {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 auto 15px;
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.contextLink:hover {
+  opacity: 0.75;
+}
+
+.contextLink:focus-visible {
+  outline: 2px solid var(--btn-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 640px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--background-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 28px 32px;
+  text-align: left;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+  line-height: 1.7;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  padding-bottom: 10px;
+}
+
+.modalPara {
+  margin-bottom: 14px;
+  font-size: 0.97rem;
+}
+
+.modalLinks {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  font-size: 0.95rem;
+}
+
+.modalTextLink {
+  color: var(--btn-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.modalTextLink:hover {
+  opacity: 0.8;
+}
+
+.closeButton {
+  margin-top: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--btn-color);
+  color: white;
+  cursor: pointer;
 }
 
 @media (min-width: 800px) {
