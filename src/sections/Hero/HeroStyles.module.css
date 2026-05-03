@@ -4,8 +4,10 @@
     justify-content: center;
     gap: 20px;
     text-align: center;
-    height: 100dvh;
+    height: auto;
+    min-height: 100dvh;
     min-height: 500px;
+    padding: 40px 20px;
 }
 
 .hero {
@@ -68,8 +70,19 @@ button:active {
 }
 
 .description {
-    max-width: 24ch;
+    max-width: min(68ch, 92vw);
     align-self: center;
+    line-height: 1.65;
+    text-wrap: pretty;
+    hyphens: auto;
+}
+
+.description p {
+    margin: 0;
+}
+
+.description p + p {
+    margin-top: 12px;
 }
 
 .info {
@@ -78,11 +91,22 @@ button:active {
     gap: 20px;
 }
 
+.ctaRow {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 @media (width >= 800px) {
     .container {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    .info {
+        max-width: 680px;
     }
 
     .hero {
